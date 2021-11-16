@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
 document.getElementById("play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	document.getElementById('volume').innerHTML = document.getElementById('slider').value + "%";
 });
 
 document.getElementById("pause").addEventListener("click", function() {
@@ -47,7 +48,6 @@ document.getElementById('mute').addEventListener("click", function () {
 		document.getElementById('mute').innerHTML = "Mute";
 	}
 });
-
 
 document.getElementById("slider").addEventListener("click", function() {
 	video.volume = document.getElementById('slider').value / 100;
